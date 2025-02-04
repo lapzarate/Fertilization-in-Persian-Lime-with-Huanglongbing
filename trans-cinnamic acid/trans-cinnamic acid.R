@@ -1,5 +1,5 @@
 
-#Gráfica
+#Graph
 library(ggplot2)
 Plot_TCA$Sanidad <- factor(Plot_TCA$Sanidad, levels = c("HLB+", "HLB-")) #Sort health status data
 tca1 <- ggplot(Plot_TCA, aes(Factor, Prom,fill=Sanidad)) + geom_bar(stat="identity", position=position_dodge(width=0.9),colour = 'black',linewidth=1)+scale_fill_manual(values = c("black","grey"))+geom_errorbar(aes(ymin =Prom, ymax = Prom+DE), width=0.4,linewidth=1, position=position_dodge(width=0.9))+ylab(expression("t-Cinnamic acid (ng g"^-1* " FW)")) + 
