@@ -1,6 +1,3 @@
-#limpiarambiente
-rm(list=ls())
-
 #plot of the effect of CLas infection and fertilization treatments on the content of total chlorophyll
 library(ggplot2)
 
