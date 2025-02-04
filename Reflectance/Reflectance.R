@@ -12,32 +12,32 @@ ggsave(filename="ReflectpromS_E.jpg",width=20, height=15, units="cm")
 #Graphs of averages by treatment
 #540-560 nm
 
-graf540_560$Sanidad <- factor(graf540_560$Sanidad, levels = c("HLB+", "HLB-")) #Ordenar
+graf540_560$Sanidad <- factor(graf540_560$Sanidad, levels = c("HLB+", "HLB-")) #Sort health status data
 ref550 <- ggplot(graf540_560, aes(w.length,prom)) +geom_line(aes(group=sub,color=Sanidad),lwd=1,linetype=1)+ labs(x='Longitu de onda (nm)', y='Reflectancia (%)')+scale_colour_manual("",values = c("#a10707", "#38a33b"))+stat_wl_strip(ymin = 5, ymax = 5.5)+scale_fill_identity()+theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x = element_text(size=14, angle=35,vjust=.7),axis.title.y = element_text(size=18),legend.title = element_text(size=20),axis.text = element_text(size = 20),strip.text.x = element_text(size = 20))+facet_grid(~Sanidad)
 ref550+coord_cartesian(ylim = c(5,14))
 ggsave(filename="R550.jpg",width=20, height=15, units="cm")
 
 #780-800 nm
-graf780_800$Sanidad <- factor(graf780_800$Sanidad, levels = c("HLB+", "HLB-")) #Ordenar
+graf780_800$Sanidad <- factor(graf780_800$Sanidad, levels = c("HLB+", "HLB-")) #Sort health status data
 ref790 <- ggplot(graf780_800, aes(w.length,prom)) +geom_line(aes(group=sub,color=Sanidad),lwd=1,linetype=1)+ labs(x='Longitu de onda (nm)', y='Reflectancia (%)')+scale_colour_manual("",values = c("#a10707","#38a33b"))+stat_wl_strip(ymin = 54, ymax = 55)+scale_fill_identity()+theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x = element_text(size=14, angle=35,vjust=.7),axis.title.y = element_text(size=18),legend.title = element_text(size=20),axis.text = element_text(size = 20),strip.text.x = element_text(size = 20))+facet_grid(~Sanidad)
 ref790+coord_cartesian(ylim = c(54,70))
 ggsave(filename="R790.jpg",width=20, height=15, units="cm")
 
 #Graph for macro and micronutrient levels at sampling times at 550 nm
 #summer
-Reflec550_summer$Sanidad <- factor(Reflec550_summer$Sanidad, levels = c("HLB+", "HLB-"))
+Reflec550_summer$Sanidad <- factor(Reflec550_summer$Sanidad, levels = c("HLB+", "HLB-")) #Sort health status data
 Ref550summer <- ggplot(Reflec550_summer, aes(Factor, Prom,fill=Sanidad)) + geom_bar(stat="identity", position=position_dodge(width=0.9),colour = 'black',linewidth=1)+scale_fill_manual(values = c("black", "grey"))+geom_errorbar(aes(ymin =Prom, ymax = Prom+DE), width=0.4,linewidth=1, position=position_dodge(width=0.9))+ylab("Reflectance at 550 nm (%)")+xlab("Macronutrients")+theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x = element_text(size=12,vjust=.7),axis.title.y = element_text(size=18),legend.title = element_text(size=10),axis.text = element_text(size = 18),strip.text.x = element_text(size = 16))+facet_grid(. ~ Nivel)
 Ref550summer+coord_cartesian(ylim = c(5, 17))
 ggsave(filename="Reflect550summer.jpg",width=15, height=15, units="cm")
 
 #winter
-Reflec550_winter$Sanidad <- factor(Reflec550_winter$Sanidad, levels = c("HLB+", "HLB-"))
+Reflec550_winter$Sanidad <- factor(Reflec550_winter$Sanidad, levels = c("HLB+", "HLB-")) #Sort health status data
 Ref550winter <- ggplot(Reflec550_winter, aes(Factor, Prom,fill=Sanidad)) + geom_bar(stat="identity", position=position_dodge(width=0.9),colour = 'black',linewidth=1)+scale_fill_manual(values = c("black", "grey"))+geom_errorbar(aes(ymin =Prom, ymax = Prom+DE), width=0.4,linewidth=1, position=position_dodge(width=0.9))+ylab("Reflectance at 550 nm (%)")+xlab("Macronutrients")+theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x = element_text(size=12,vjust=.7),axis.title.y = element_text(size=18),legend.title = element_text(size=10),axis.text = element_text(size = 18),strip.text.x = element_text(size = 16))+facet_grid(. ~ Nivel)
 Ref550winter+coord_cartesian(ylim = c(5, 17))
 ggsave(filename="Reflect550winter.jpg",width=15, height=15, units="cm")
 
 #Fall
-Reflec550_fall$Sanidad <- factor(Reflec550_fall$Sanidad, levels = c("HLB+", "HLB-"))
+Reflec550_fall$Sanidad <- factor(Reflec550_fall$Sanidad, levels = c("HLB+", "HLB-")) #Sort health status data
 Ref550fall <- ggplot(Reflec550_fall, aes(Factor, Prom,fill=Sanidad)) + geom_bar(stat="identity", position=position_dodge(width=0.9),colour = 'black',linewidth=1)+scale_fill_manual(values = c("black", "grey"))+geom_errorbar(aes(ymin =Prom, ymax = Prom+DE), width=0.4,linewidth=1, position=position_dodge(width=0.9))+ylab("Reflectance at 550 nm (%)")+xlab("Macronutrients")+theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x = element_text(size=12,vjust=.7),axis.title.y = element_text(size=18),legend.title = element_text(size=10),axis.text = element_text(size = 18),strip.text.x = element_text(size = 16))+facet_grid(. ~ Nivel)
 Ref550fall+coord_cartesian(ylim = c(5, 17))
 ggsave(filename="Reflect550fall.jpg",width=15, height=15, units="cm")
@@ -45,19 +45,19 @@ ggsave(filename="Reflect550fall.jpg",width=15, height=15, units="cm")
 #Graph for macro and micronutrient levels at sampling times at 790 nm
 
 #summer
-Reflec790_summer$Sanidad <- factor(Reflec790_summer$Sanidad, levels = c("HLB+", "HLB-"))
+Reflec790_summer$Sanidad <- factor(Reflec790_summer$Sanidad, levels = c("HLB+", "HLB-")) #Sort health status data
 Ref790summer <- ggplot(Reflec790_summer, aes(Factor, Prom,fill=Sanidad)) + geom_bar(stat="identity", position=position_dodge(width=0.9),colour = 'black',linewidth=1)+scale_fill_manual(values = c("black", "grey"))+geom_errorbar(aes(ymin =Prom, ymax = Prom+DE), width=0.4,linewidth=1, position=position_dodge(width=0.9))+ylab("Reflectance at 790 nm (%)")+xlab("Macronutrients")+theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x = element_text(size=12,vjust=.7),axis.title.y = element_text(size=18),legend.title = element_text(size=10),axis.text = element_text(size = 18),strip.text.x = element_text(size = 16))+facet_grid(. ~ Nivel)
 Ref790summer+coord_cartesian(ylim = c(40, 75))
 ggsave(filename="Reflect790summer.jpg",width=15, height=15, units="cm")
 
 #winter
-Reflec790_winter$Sanidad <- factor(Reflec790_winter$Sanidad, levels = c("HLB+", "HLB-"))
+Reflec790_winter$Sanidad <- factor(Reflec790_winter$Sanidad, levels = c("HLB+", "HLB-")) #Sort health status data
 Ref790winter <- ggplot(Reflec790_winter, aes(Factor, Prom,fill=Sanidad)) + geom_bar(stat="identity", position=position_dodge(width=0.9),colour = 'black',linewidth=1)+scale_fill_manual(values = c("black", "grey"))+geom_errorbar(aes(ymin =Prom, ymax = Prom+DE), width=0.4,linewidth=1, position=position_dodge(width=0.9))+ylab("Reflectance at 790 nm (%)")+xlab("Macronutrients")+theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x = element_text(size=12,vjust=.7),axis.title.y = element_text(size=18),legend.title = element_text(size=10),axis.text = element_text(size = 18),strip.text.x = element_text(size = 16))+facet_grid(. ~ Nivel)
 Ref790winter+coord_cartesian(ylim = c(40, 75))
 ggsave(filename="Reflect790winter.jpg",width=15, height=15, units="cm")
 
 #fall
-Reflec790_fall$Sanidad <- factor(Reflec790_fall$Sanidad, levels = c("HLB+", "HLB-"))
+Reflec790_fall$Sanidad <- factor(Reflec790_fall$Sanidad, levels = c("HLB+", "HLB-")) #Sort health status data
 Ref790fall <- ggplot(Reflec790_fall, aes(Factor, Prom,fill=Sanidad)) + geom_bar(stat="identity", position=position_dodge(width=0.9),colour = 'black',linewidth=1)+scale_fill_manual(values = c("black", "grey"))+geom_errorbar(aes(ymin =Prom, ymax = Prom+DE), width=0.4,linewidth=1, position=position_dodge(width=0.9))+ylab("Reflectance at 790 nm (%)")+xlab("Macronutrients")+theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),axis.text.x = element_text(size=12,vjust=.7),axis.title.y = element_text(size=18),legend.title = element_text(size=10),axis.text = element_text(size = 18),strip.text.x = element_text(size = 16))+facet_grid(. ~ Nivel)
 Ref790fall+coord_cartesian(ylim = c(40, 75))
 
