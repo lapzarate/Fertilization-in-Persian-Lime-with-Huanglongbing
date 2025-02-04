@@ -1,4 +1,4 @@
 # Fertilization-in-Persian-Lime-with-Huanglongbing
-This repository contains databases in CSV and XML format, along with R scripts required to generate graphs and perform statistical analyses that support the results of the article: “Fertilization Regimes in *Citrus latifolia* Tan. with Huanglongbing and Its Physiological and Hormonal Response” by Pérez-Zárate *et al.* (2025).
+This repository contains databases in CSV and XML format, along with R scripts required to generate graphs and perform statistical analyses that support the results of the article: “Fertilization Regimes in *Citrus latifolia* Tan. with Huanglongbing and Its Physiological and Hormonal Response” by Pérez-Zarate *et al.* (2025).
 The article is under editorial review for publication in the journal Plants by MDPI, in the special issue “Strategies for Nutrient Use Efficiency Improvement in Plants”.
 In this study, we evaluated the effect of three macronutrient levels (low, medium, and high doses) and three micronutrient levels (no micronutrients, soil application, and soil plus foliar application) on physiological and hormonal parameters in healthy and HLB-affected Persian lime plants.
