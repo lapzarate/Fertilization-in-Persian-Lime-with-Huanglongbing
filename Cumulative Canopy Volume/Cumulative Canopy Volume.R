@@ -1,6 +1,3 @@
-#limpiarambiente
-rm(list=ls())
-
 #plot of the effect of CLas infection and fertilization treatments on the Canopy Volume
 library(ggplot2)
 Canopy_Volume_Plot$Sanidad <- factor(Canopy_Volume_Plot$Sanidad, levels = c("HLB+", "HLB-")) #Sort health status data
